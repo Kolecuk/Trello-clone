@@ -1,0 +1,29 @@
+{
+  "name": "trello-clone",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kolecuk/Trello-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kolecuk/Trello-clone/issues"
+  },
+  "homepage": "https://github.com/Kolecuk/Trello-clone#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
+  }
+}
