@@ -1,0 +1,304 @@
+// Vendors
+@import "bootstrap/scss/bootstrap";
+
+// Components
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1064px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 213, 1);
+}
+
+// header {
+//   background-color: rgba(127, 255, 212, 1);
+// }
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  // padding: 10px 362px;
+}
+
+.alert {
+  margin-bottom: 0;
+  padding: 11px 48px 11px 16px;
+}
+
+.alert .btn-close {
+  padding: 0.92rem 1rem;
+}
+
+.header__time {
+  width: 80px;
+  margin-left: 126px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(108, 117, 125, 1);
+  border-radius: 5px;
+}
+
+// main {
+//   background-color: rgba(127, 255, 212, 1);
+// }
+
+.list__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.list__board {
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+  width: 100%;
+}
+
+.list__board_main > :not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.todo > :first-child {
+  background-color: rgba(0, 220, 255, 1);
+}
+
+.todo > :not(:first-child) {
+  background-color: rgba(0, 220, 255, 0.5);
+}
+
+.todo .list__board_task {
+  border-top: 4mm ridge rgba(0, 220, 255, 1);
+}
+
+.active > :first-child {
+  background-color: rgba(255, 210, 0, 1);
+}
+
+.active > :not(:first-child) {
+  background-color: rgba(255, 210, 0, 0.5);
+}
+
+.active .list__board_task {
+  border-top: 4mm ridge rgba(255, 210, 0, 1);
+}
+
+.done > :first-child {
+  background-color: rgba(5, 255, 60, 1);
+}
+
+.done > :not(:first-child) {
+  background-color: rgba(5, 255, 60, 0.5);
+}
+
+.done .list__board_task {
+  border-top: 4mm ridge rgba(5, 255, 60, 1);
+}
+
+.list__board_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.list__board_counter {
+  max-width: 40px;
+  background-color: unset;
+  text-align: end;
+  border: none;
+}
+
+.list__board_main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.active .list__board_main {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.list__board_task {
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.list__board_task > :not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info__user_value {
+  max-width: 100px;
+  background-color: unset;
+  border: none;
+}
+
+.info__data_value {
+  max-width: 123px;
+  background-color: unset;
+  border: none;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+//чтобы название было вверху относительно textarea
+.task__title {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+// возможно появится min-height чтобы делать автовысоту textarea
+// она делается в js
+// https://html-css.blog/js/avtomaticheskaya-vysota-textarea/
+
+.task__title_value {
+  max-width: 200px;
+  // min-height: 20px;
+  height: 27px;
+  background-color: unset;
+  border: none;
+  resize: none;
+}
+
+//см описание для task__title
+.task__description {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+//см описание для task__title_value
+.task__description_value {
+  max-width: 200px;
+  // min-height: 20px;
+  height: 27px;
+  background-color: unset;
+  border: none;
+  resize: none;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action__select {
+  width: 140px;
+}
+
+.action__edit {
+  width: 80px;
+}
+
+.action__remove {
+  width: 80px;
+}
+
+.list__board_footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.list__board_button {
+  width: 200px;
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+}
+
+.create > :not(:last-child) {
+  margin-bottom: 10px;
+}
+
+//см описание для task__title
+.create__user {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+//см описание для task__title_value
+.create__user_value {
+  max-width: 340px;
+  width: 100%;
+  // min-height: 20px;
+  height: 32px;
+  padding: 0 10px;
+  background-color: rgba(0, 220, 255, 0.1);
+  border: 1px solid rgba(108, 117, 125, 1);
+  border-radius: 10px;
+  resize: none;
+}
+
+//см описание для task__title
+.create__title {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+//см описание для task__title_value
+.create__title_value {
+  max-width: 340px;
+  width: 100%;
+  // min-height: 20px;
+  height: 32px;
+  padding: 0 10px;
+  background-color: rgba(0, 220, 255, 0.1);
+  border: 1px solid rgba(108, 117, 125, 1);
+  border-radius: 10px;
+  resize: none;
+}
+
+//см описание для task__title
+.create__description {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+//см описание для task__title_value
+.create__description_value {
+  max-width: 340px;
+  width: 100%;
+  // min-height: 20px;
+  height: 32px;
+  padding: 0 10px;
+  background-color: rgba(0, 220, 255, 0.1);
+  border: 1px solid rgba(108, 117, 125, 1);
+  border-radius: 10px;
+  resize: none;
+}
