@@ -32,13 +32,13 @@ class Task {
 
 //Variables --------------------------------------------------------------------------------------------------------------
 const clock = document.querySelector('.header__time')
+let data = Task.getDataFromLocalStorage()
+const formAddTaskElement = document.querySelector('#addTask')
 const dataCounterOfAllTasks = document.querySelectorAll('.list__board_counter')
+const listElement = document.querySelector('.list__wrapper')
 const rootTodoElement = document.querySelector('.todo .list__board_main')
 const rootProgressElement = document.querySelector('.active .list__board_main')
 const rootDoneElement = document.querySelector('.done .list__board_main')
-const data = Task.getDataFromLocalStorage()
-const formAddTaskElement = document.querySelector('#addTask')
-const listElement = document.querySelector('.list__wrapper')
 
 //Handlers ---------------------------------------------------------------------------------------------------------------
 formAddTaskElement.addEventListener('submit', handleSubmitTask)
@@ -86,15 +86,12 @@ function render(payload = []) {
   payload.forEach(function (item) {
     switch (item.state) {
       case 'todo':
-        console.log('todo%%%%')
         rootTodoElement.insertAdjacentHTML('beforeend', templateListBoard(item))
         break;
       case 'progress':
-        console.log('progress%%%%')
         rootProgressElement.insertAdjacentHTML('beforeend', templateListBoard(item))
         break;
       case 'done':
-        console.log('done%%%%')
         rootDoneElement.insertAdjacentHTML('beforeend', templateListBoard(item))
         break;
     }

@@ -47,7 +47,7 @@
   </header>
 
   <main>
-    <section class="wrapper list__wrapper">
+    <div class="wrapper list__wrapper">
       <!-- Board Todo -->
       <div class="todo list__board">
         <div class="list__board_header">
@@ -56,8 +56,7 @@
           </h2>
           <input class="list__board_counter" type="text" value="0" data-action="counterTodo" readonly>
         </div>
-        <div class="list__board_main">
-        </div>
+        <div class="list__board_main"></div>
         <div class="list__board_footer">
           <button type="button" class="btn btn-primary list__board_button" data-bs-toggle="modal"
             data-bs-target="#addTodoModal" data-action="addTodo">
@@ -74,8 +73,7 @@
           </h2>
           <input class="list__board_counter" type="text" value="0" data-action="counterProgress" readonly>
         </div>
-        <div class="list__board_main">
-        </div>
+        <div class="list__board_main"></div>
       </div>
 
       <!-- Board Done -->
@@ -86,8 +84,7 @@
           </h2>
           <input class="list__board_counter" type="text" value="0" data-action="counterDone" readonly>
         </div>
-        <div class="list__board_main">
-        </div>
+        <div class="list__board_main"></div>
         <div class="list__board_footer">
           <button type="button" class="btn btn-danger list__board_button" data-bs-toggle="modal"
             data-bs-target="#removeAllModal" data-action="removeAll">
@@ -175,7 +172,7 @@
         </div>
       </div>
 
-    </section>
+    </div>
   </main>
 </body>
 
